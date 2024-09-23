@@ -25,7 +25,7 @@ export STEP=stats
 export COMPONENT=cam
 export RUN=atmos
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 source $HOMEevs/versions/run.ver
 module reset
 module load prod_envir/${prod_envir_ver}
@@ -38,15 +38,15 @@ evs_ver_2d=$(echo $evs_ver | cut -d'.' -f1-2)
 # For dev testing
 ############################################################
 export envir=prod
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
 export KEEPDATA=YES
 export VERIF_CASE=severe
 export MODELNAME=hireswarw
 export modsys=hiresw
 export job=${PBS_JOBNAME:-jevs_${COMPONENT}_${MODELNAME}_${VERIF_CASE}_${STEP}_${vhr}}
 export jobid=$job.${PBS_JOBID:-$$}
-export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/$evs_ver_2d
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/$evs_ver_2d/$STEP/$COMPONENT
+export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/$evs_ver_2d
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/$evs_ver_2d/$STEP/$COMPONENT
 ############################################################
 
 export vhr=${vhr:-${vhr}}

@@ -14,7 +14,7 @@ cd $PBS_O_WORKDIR
 
 export model=evs
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/emc.vpppg/EVS_beta5
 
 source $HOMEevs/versions/run.ver
 
@@ -33,9 +33,9 @@ module load prod_envir/${prod_envir_ver}
 #############################################################
 
 export envir=prod
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
 export KEEPDATA=YES
-export SENDMAIL=YES
+export SENDMAIL=NO
 export NET=evs
 export STEP=stats
 export COMPONENT=analyses
@@ -47,9 +47,9 @@ source $HOMEevs/dev/modulefiles/$COMPONENT/${COMPONENT}_${STEP}.sh
 export job=${PBS_JOBNAME:-jevs_${MODELNAME}_${VERIF_CASE}_${STEP}}
 export jobid=$job.${PBS_JOBID:-$$}
 
-export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}/${evs_ver_2d}
-export EVSINccpa=/lfs/h2/emc/vpppg/noscrub/emc.vpppg/${NET}/${evs_ver_2d}/prep/cam
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}/${evs_ver_2d}
+export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}
+export EVSINccpa=/lfs/h2/emc/vpppg/noscrub/emc.vpppg/${NET}_beta5/${evs_ver_2d}/prep/cam
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}
 
 export vhr
 echo $vhr

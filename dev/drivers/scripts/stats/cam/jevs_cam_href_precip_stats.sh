@@ -13,7 +13,7 @@ export OMP_NUM_THREADS=1
 
 ## 3x7 conus(ccpa) + 3x7 alaska(mrms) + 2 snow = 44 jobs 
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 source $HOMEevs/versions/run.ver
 
 export NET=evs
@@ -23,7 +23,7 @@ export RUN=atmos
 export VERIF_CASE=precip
 export MODELNAME=href
 export KEEPDATA=YES
-export SENDMAIL=YES
+export SENDMAIL=NO
 
 module reset
 module load prod_envir/${prod_envir_ver}
@@ -32,10 +32,10 @@ evs_ver_2d=$(echo $evs_ver | cut -d'.' -f1-2)
 
 export vhr=00
 
-export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/$evs_ver_2d
+export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/$evs_ver_2d
 export envir=prod
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/$evs_ver_2d/$STEP/$COMPONENT
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/$evs_ver_2d/$STEP/$COMPONENT
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
 export job=${PBS_JOBNAME:-jevs_${MODELNAME}_${VERIF_CASE}_${STEP}}
 export jobid=$job.${PBS_JOBID:-$$}
 

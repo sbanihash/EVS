@@ -13,7 +13,7 @@ export model=evs
 
 cd $PBS_O_WORKDIR
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 
 source $HOMEevs/versions/run.ver
 module reset
@@ -23,13 +23,13 @@ source $HOMEevs/dev/modulefiles/subseasonal/subseasonal_prep.sh
 evs_ver_2d=$(echo $evs_ver | cut -d'.' -f1-2)
 
 export envir=prod
-export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_beta5_test/$envir/tmp
 export job=${PBS_JOBNAME:-jevs_subseasonal_cfs_prep}
 export jobid=$job.${PBS_JOBID:-$$}
 export TMPDIR=$DATAROOT
 export SITE=$(cat /etc/cluster_name)
 export KEEPDATA=YES
-export SENDMAIL=YES
+export SENDMAIL=NO
 
 export MAILTO='alicia.bentley@noaa.gov,shannon.shields@noaa.gov'
 
@@ -50,7 +50,7 @@ export MODELNAME=cfs
 export cfs_ver=${cfs_ver}
 export PREP_TYPE=cfs
 
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/${evs_ver_2d}/$STEP/$COMPONENT/$RUN
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}/$STEP/$COMPONENT/$RUN
 
 export config=$HOMEevs/parm/evs_config/subseasonal/config.evs.subseasonal.cfs.prep
 

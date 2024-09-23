@@ -13,7 +13,7 @@ set -x
 
 export OMP_NUM_THREADS=1
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS_beta5
 
 source $HOMEevs/versions/run.ver
 
@@ -34,12 +34,12 @@ evs_ver_2d=$(echo $evs_ver | cut -d'.' -f1-2)
 
 
 export KEEPDATA=YES
-export SENDMAIL=YES
+export SENDMAIL=NO
 
 export vhr=${vhr:-00}
 
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/${USER}/$NET/$evs_ver_2d
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/$evs_ver_2d
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
 
 export MAILTO='andrew.benjamin@noaa.gov,binbin.zhou@noaa.gov'
 

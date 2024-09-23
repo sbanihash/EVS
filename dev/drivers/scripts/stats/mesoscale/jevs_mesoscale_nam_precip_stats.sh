@@ -18,7 +18,7 @@ export SENDCOM=YES
 export KEEPDATA=YES
 export SENDDBN=NO
 export SENDDBN_NTC=
-export SENDMAIL=YES
+export SENDMAIL=NO
 export job=${PBS_JOBNAME:-jevs_nam_precip_stats}
 export jobid=$job.${PBS_JOBID:-$$}
 export SITE=$(cat /etc/cluster_name)  
@@ -27,7 +27,7 @@ export NET="evs"
 export RUN="atmos"
 export vhr=${vhr:-${vhr}}
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS_beta5
 
 export STEP="stats"
 export COMPONENT="mesoscale"
@@ -49,9 +49,9 @@ module load prod_envir/${prod_envir_ver}
 source $HOMEevs/dev/modulefiles/${COMPONENT}/${COMPONENT}_${STEP}.sh
 evs_ver_2d=$(echo $evs_ver | cut -d'.' -f1-2)
 
-export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/$NET/$evs_ver_2d
-export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_test/$envir/tmp
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/${USER}/$NET/$evs_ver_2d/$STEP/$COMPONENT
+export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/$evs_ver_2d
+export DATAROOT=/lfs/h2/emc/stmp/emc.vpppg/evs_beta5_test/$envir/tmp
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/$evs_ver_2d/$STEP/$COMPONENT
 
 # Job Settings and Run
 ${HOMEevs}/jobs/JEVS_MESOSCALE_STATS

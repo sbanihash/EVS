@@ -12,7 +12,7 @@ set -x
 cd $PBS_O_WORKDIR
 
 export model=evs
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS_beta5
 
 source $HOMEevs/versions/run.ver
 
@@ -37,7 +37,7 @@ source $HOMEevs/dev/modulefiles/global_ens/global_ens_prep.sh
 ## set some variables
 #############################################################
 export KEEPDATA=YES
-export SENDMAIL=YES
+export SENDMAIL=NO
 export SENDDBN=NO
 
 export envir=prod
@@ -53,10 +53,10 @@ export mod_ver=${mod_ver:-${gefs_ver}}
 export INITDATE=${INITDATE:-$(date --date="3 days ago" +%Y%m%d)}
 echo "INITDATE=${INITDATE}"
 
-export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/${evs_ver_2d}
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/${evs_ver_2d}
+export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}
 
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/${envir}/tmp
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/${envir}/tmp
 export job=${PBS_JOBNAME:-jevs_${MODELNAME}_${RUN}_${VERIF_CASE}_${STEP}}
 export jobid=$job.${PBS_JOBID:-$$}
 

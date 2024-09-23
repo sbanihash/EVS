@@ -10,7 +10,7 @@
 set -x 
 
 export OMP_NUM_THREADS=1
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 ############################################################
 # read version file and set model_ver
 ############################################################
@@ -42,11 +42,11 @@ export SENDCOM=${SENDCOM:-YES}
 export SENDECF=${SENDECF:-YES}
 export SENDDBN=${SENDDBN:-YES}
 export KEEPDATA=${KEEPDATA:-YES}
-#export SENDMAIL=YES
+#export SENDMAIL=NO
 ## developers directories
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
-export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}/${evs_ver_2d}
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}/${evs_ver_2d}/${STEP}/${COMPONENT}
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
+export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}/${STEP}/${COMPONENT}
 
 export run_mpi='yes'
 export gather='yes'

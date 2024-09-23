@@ -11,7 +11,7 @@ set -x
 
 export OMP_NUM_THREADS=1
 
-export HOMEevs=${HOMEevs:-/lfs/h2/emc/vpppg/noscrub/$USER/EVS}
+export HOMEevs=${HOMEevs:-/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5}
 
 ############################################################
 # Basic environment variables
@@ -36,7 +36,7 @@ evs_ver_2d=$(echo $evs_ver | cut -d'.' -f1-2)
 # environment variables set
 ############################################################
 export envir=prod
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}/$evs_ver_2d
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/$evs_ver_2d
 
 ############################################################
 # set up for email alerts of missing data
@@ -51,7 +51,7 @@ export SENDMAIL=${SENDMAIL:-YES}
 ############################################################
 # CALL executable job script here
 ############################################################
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
 
 export KEEPDATA=YES
 

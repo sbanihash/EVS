@@ -11,7 +11,7 @@ set -x
 export OMP_NUM_THREADS=1
 #Total 2 processes
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS_beta5
 source $HOMEevs/versions/run.ver
 
 export envir=prod
@@ -28,12 +28,12 @@ source $HOMEevs/dev/modulefiles/$COMPONENT/${COMPONENT}_${STEP}.sh
 evs_ver_2d=$(echo $evs_ver | cut -d'.' -f1-2)
 
 export KEEPDATA=YES
-export SENDMAIL=YES
+export SENDMAIL=NO
 export SENDCOM=YES
 
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/${USER}/$NET/$evs_ver_2d
-export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_test/$envir/tmp
-export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/$NET/$evs_ver_2d
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/$evs_ver_2d
+export DATAROOT=/lfs/h2/emc/stmp/emc.vpppg/evs_beta5_test/$envir/tmp
+export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/$evs_ver_2d
 export job=${PBS_JOBNAME:-jevs_${MODELNAME}_${VERIF_CASE}_${STEP}}
 export jobid=$job.${PBS_JOBID:-$$}
 

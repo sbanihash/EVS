@@ -13,7 +13,7 @@ export model=evs
 
 cd $PBS_O_WORKDIR
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 
 export job=${PBS_JOBNAME:-jevs_subseasonal_cfs_grid2obs_stats}
 export jobid=$job.${PBS_JOBID:-$$}
@@ -29,7 +29,7 @@ evs_ver_2d=$(echo $evs_ver | cut -d'.' -f1-2)
 export USER=$USER
 export envir=prod
 export KEEPDATA=YES
-export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_beta5_test/$envir/tmp
 export ACCOUNT=VERF-DEV
 export QUEUE=dev
 export QUEUESHARED=dev_shared
@@ -48,8 +48,8 @@ export MODELNAME=cfs
 export cfs_ver=${cfs_ver}
 export VERIF_CASE=grid2obs
 
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/${evs_ver_2d}/$STEP/$COMPONENT
-export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/${evs_ver_2d}/prep/$COMPONENT/$RUN
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}/$STEP/$COMPONENT
+export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}/prep/$COMPONENT/$RUN
 
 export config=$HOMEevs/parm/evs_config/subseasonal/config.evs.subseasonal.cfs.grid2obs.stats
 

@@ -10,7 +10,7 @@
 
 set -x
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 
 export MODELNAME=glwu
 export NET=evs
@@ -52,10 +52,10 @@ export MAILTO='andrew.benjamin@noaa.gov,samira.ardani@noaa.gov'
 
 
 # developers directories
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
 export OUTPUTROOT=/lfs/h2/emc/vpppg/noscrub/$USER
-export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}/${evs_ver_2d}
-export COMOUT=${OUTPUTROOT}/${NET}/${evs_ver_2d}/${STEP}/${COMPONENT}/${RUN}
+export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/${evs_ver_2d}
+export COMOUT=${OUTPUTROOT}/${NET}_beta5/${evs_ver_2d}/${STEP}/${COMPONENT}/${RUN}
 
 export job=${PBS_JOBNAME:-jevs_glwu_wave_grid2obs_prep}
 export jobid=$job.${PBS_JOBID:-$$}

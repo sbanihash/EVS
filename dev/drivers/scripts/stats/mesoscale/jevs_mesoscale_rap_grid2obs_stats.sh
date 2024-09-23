@@ -17,7 +17,7 @@ set -x
   export KEEPDATA=YES
   export SENDDBN=NO
   export SENDDBN_NTC=
-  export SENDMAIL=YES
+  export SENDMAIL=NO
   export job=${PBS_JOBNAME:-jevs_mesoscale_grid2obs_stats}
   export jobid=$job.${PBS_JOBID:-$$}
   export SITE=$(cat /etc/cluster_name)
@@ -36,7 +36,7 @@ set -x
   export evs_run_mode="production"
 
 # EVS Settings
-  export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS
+  export HOMEevs=/lfs/h2/emc/vpppg/noscrub/${USER}/EVS_beta5
 
 
 # EVS configuration
@@ -52,11 +52,11 @@ export MET_CONFIG="${MET_PLUS_PATH}/parm/met_config"
 export PYTHONPATH=$HOMEevs/ush/$COMPONENT:$PYTHONPATH
 
 # In production the following will be deleted (DATAROOT will be used instead, which already exists in the environment)
-  export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_test/$envir/tmp
+  export DATAROOT=/lfs/h2/emc/stmp/emc.vpppg/evs_beta5_test/$envir/tmp
 
 # Developer Settings
-  export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/$NET/$evs_ver_2d
-  export COMOUT=/lfs/h2/emc/vpppg/noscrub/${USER}/$NET/$evs_ver_2d/$STEP/$COMPONENT
+  export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/$evs_ver_2d
+  export COMOUT=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/$evs_ver_2d/$STEP/$COMPONENT
 
   export vhr=${vhr:-${vhr}}
   export MAILTO="perry.shafran@noaa.gov,andrew.benjamin@noaa.gov"

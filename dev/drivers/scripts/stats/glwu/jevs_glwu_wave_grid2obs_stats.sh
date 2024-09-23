@@ -11,7 +11,7 @@
 set -x
 
 export OMP_NUM_THREADS=1
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 
 export MODELNAME=glwu
 export OBTYPE=GDAS
@@ -49,10 +49,10 @@ export SENDDBN=${SENDDBN:-NO}
 export KEEPDATA=${KEEPDATA:-YES}
  
 ### developers directories
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
 export OUTPUTROOT="/lfs/h2/emc/vpppg/noscrub/$USER"
-export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}/${evs_ver_2d}
-export COMOUT=${OUTPUTROOT}/${NET}/${evs_ver_2d}/${STEP}/${COMPONENT}
+export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/${evs_ver_2d}
+export COMOUT=${OUTPUTROOT}/${NET}_beta5/${evs_ver_2d}/${STEP}/${COMPONENT}
  
 export run_mpi='yes'
 export gather='yes'

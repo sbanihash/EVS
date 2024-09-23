@@ -12,10 +12,10 @@ set -x
 cd $PBS_O_WORKDIR
 
 export model=evs
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 
 export SENDCOM=YES
-export SENDMAIL=YES
+export SENDMAIL=NO
 export KEEPDATA=YES
 export job=${PBS_JOBNAME:-jevs_global_det_metfra_atmos_grid2grid_stats}
 export jobid=$job.${PBS_JOBID:-$$}
@@ -43,10 +43,10 @@ export RUN=atmos
 export VERIF_CASE=grid2grid
 export MODELNAME=metfra
 
-export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/$USER/evs_beta5_test/$envir/tmp
 export TMPDIR=$DATAROOT
-export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/$evs_ver_2d
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/$NET/$evs_ver_2d/$STEP/$COMPONENT
+export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/$evs_ver_2d
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/$evs_ver_2d/$STEP/$COMPONENT
 
 export config=$HOMEevs/parm/evs_config/global_det/config.evs.prod.${STEP}.${COMPONENT}.${RUN}.${VERIF_CASE}.${MODELNAME}
 
