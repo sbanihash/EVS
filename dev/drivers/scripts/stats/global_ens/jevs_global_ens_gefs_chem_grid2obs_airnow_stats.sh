@@ -57,7 +57,7 @@ echo "VDATE=${VDATE}"
 export DATA_TYPE=airnow
 
 export COMIN=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}
-export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5_beta5/${evs_ver_2d}
+export COMOUT=/lfs/h2/emc/vpppg/noscrub/$USER/${NET}_beta5/${evs_ver_2d}
 
 export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/${envir}/tmp
 export job=${PBS_JOBNAME:-jevs_${MODELNAME}_${RUN}_${VERIF_CASE}_${DATA_TYPE}_${STEP}}
