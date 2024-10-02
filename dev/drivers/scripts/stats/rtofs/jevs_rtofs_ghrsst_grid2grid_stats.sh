@@ -25,7 +25,8 @@ export SENDMAIL=NO
 export envir=prod
 export NET=evs
 export STEP=stats
-export RUN=ghrsst
+export RUN=ocean
+export OBTYPE=ghrsst
 export VERIF_CASE=grid2grid
 export COMPONENT=rtofs
 
