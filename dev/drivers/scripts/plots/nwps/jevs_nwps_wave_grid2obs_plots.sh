@@ -9,7 +9,7 @@
 
 set -x
 
-export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS
+export HOMEevs=/lfs/h2/emc/vpppg/noscrub/$USER/EVS_beta5
 
 export MODELNAME=nwps
 export OBTYPE=NDBC
@@ -45,10 +45,10 @@ export SENDDBN=${SENDDBN:-NO}
 export KEEPDATA=${KEEPDATA:-YES}
 
 ## developers directories
-export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_test/$envir/tmp
+export DATAROOT=/lfs/h2/emc/stmp/${USER}/evs_beta5_test/$envir/tmp
 export OUTPUTROOT=/lfs/h2/emc/ptmp/$USER
-export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}/${evs_ver_2d}
-export COMOUT=${OUTPUTROOT}/${NET}/${evs_ver_2d}
+export COMIN=/lfs/h2/emc/vpppg/noscrub/${USER}/${NET}_beta5/${evs_ver_2d}
+export COMOUT=${OUTPUTROOT}/${NET}_beta5/${evs_ver_2d}
 
 export run_mpi='yes'
 export gather='yes'
